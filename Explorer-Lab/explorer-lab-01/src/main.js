@@ -1,4 +1,6 @@
 import "./css/index.css"
+import IMask from "imask";
+
 
 const ccBgColor1 = document.querySelector(".cc-bg svg > g g:nth-child(1) path")
 const ccBgColor2 = document.querySelector(".cc-bg svg > g g:nth-child(2) path")
@@ -26,3 +28,18 @@ setCardType("rocketseat");
 
 globalThis.setCardType = setCardType
 //função global
+
+//SECURITY CODE
+const securityCode = document.querySelector("#secutiry-code");
+// const cvc = document.getElementById("security-code");
+
+// const secutiryCodePattern = {
+//     mask: "0000",
+// }
+// const secutiryCodeMasked = IMask(securityCode, secutiryCodePattern)
+
+const CvcMask = IMask(securityCode, { 
+    mask: '0000'
+}) 
+
+
